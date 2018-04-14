@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bkav.android.music.PlaySong_Activity">
+<ImageView
+    android:id="@+id/ImageAlbum"
+    android:src="@drawable/hoangson"
+    android:adjustViewBounds="true"
+    android:layout_width="50dp"
+    android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/NameSong"
+        android:text="Tên bài hát"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ImageAlbum"
+        android:layout_toEndOf="@+id/ImageAlbum"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
+    <TextView
+        android:id="@+id/NameAlbum"
+        android:text="Tên Album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/AnhCaSi"
+        android:layout_alignRight="@+id/NameSong"
+        android:layout_alignEnd="@+id/NameSong" />
+    <ImageView
+        android:adjustViewBounds="true"
+        android:id="@+id/showMenu"
+        android:src="@drawable/showmenu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/NameAlbum" />
+    <ImageView
+        android:id="@+id/AnhCaSi"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/hoangson"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ImageAlbum"
+        android:layout_above="@+id/seekBar" />
+    <ImageView
+        android:background="@null"
+        android:adjustViewBounds="true"
+        android:src="@drawable/two"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/LapLai"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignRight="@+id/Thoigiandau"
+        android:layout_alignEnd="@+id/Thoigiandau"
+        android:layout_marginBottom="29dp" />
+    <ImageView
+        android:id="@+id/XaoTron"
+        android:background="@null"
+        android:adjustViewBounds="true"
+        android:src="@drawable/one"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/LapLai"
+        android:layout_alignLeft="@+id/Thoigiancuoi"
+        android:layout_alignStart="@+id/Thoigiancuoi" />
+
+    <SeekBar
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Thoigiandau"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="27dp" />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:text="00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Thoigiandau"
+        android:layout_marginBottom="12dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:text="00:00"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/Thoigiancuoi" />
+<LinearLayout
+    android:background="#ccccb6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:id="@+id/linearLayout">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/Like"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:src="@drawable/like"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/Back"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:src="@drawable/black"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/Play"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pause"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/Next"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:src="@drawable/next"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/DisLike"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:src="@drawable/dislike"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>
